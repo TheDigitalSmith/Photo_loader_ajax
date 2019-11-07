@@ -177,16 +177,18 @@
             This page will dynamically load pictures from the web, and display them in a cool way!
           </p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Load Images</a>
-            <a href="#" class="btn btn-secondary my-2">Load Secondary Images</a>
+            <a href="#" class="btn btn-primary my-2" onclick="loadPhotos('river')">Load Images</a>
+            <a href="#" class="btn btn-secondary my-2" onclick="loadPhotos('city')">Load Secondary Images</a>
+            <input type="text" class="form-input" id="searchBar" placeholder="Search image">
+            <a href="#" class="btn btn-secondary my-2" onclick="loadPhotos(document.querySelector('#searchBar').value)">Search</a>
           </p>
         </div>
       </section>
 
       <div class="album py-5 bg-light">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
+          <div class="row" id="pictureGroup">
+            <!--<div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -231,7 +233,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
     </main>
 
     <footer class="text-muted">
